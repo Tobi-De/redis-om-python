@@ -1,0 +1,56 @@
+site_name: RedisOM
+site_description: Fastapi-users database adapter for TortoiseORM
+theme:
+  name: material
+  custom_dir: docs-overrides
+  palette:
+    - scheme: default
+      primary: 'red'
+      accent: 'red'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'red'
+      accent: 'red'
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+  - Home: _index.md
+  - Getting started: getting_started.md
+  - Chapters:
+      - Connections: connections.md
+      - Models: models.md
+      - Validation: validation.md
+      - Errors: errors.md
+      - Modules: redis_modules.md
+      - Fastapi: fastapi_integration.md
+
+plugins:
+  - include-markdown
+  - search
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+  - toc:
+      baselevel: 2
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - meta
